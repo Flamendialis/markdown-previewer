@@ -13,9 +13,6 @@ Copy your markdown text directly to the clipboard so you can paste it directly o
 
 Download your markdown and then upload it to your repository.
 
-```
-
-
 You can use all the features of markdown format
 Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) all your options.
 
