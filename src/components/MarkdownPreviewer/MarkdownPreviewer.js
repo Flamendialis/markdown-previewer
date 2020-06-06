@@ -27,16 +27,12 @@ class MarkdownPreviewer extends React.Component {
       if(this.state.editorExpanded){
         document.getElementById("editor-container").classList.remove("expanded");
         document.getElementById("preview-container").classList.remove("preview-collapsed");
-        this.setState((state) => Object.assign({},state,{
-          editorExpanded : false
-        }));
+        this.setState({editorExpanded : false});
       }
       else{
         document.getElementById("editor-container").classList.add("expanded");
         document.getElementById("preview-container").classList.add("preview-collapsed");
-        this.setState((state) => Object.assign({},state,{
-          editorExpanded : true
-        }));
+        this.setState({editorExpanded : true});
       }
 
     }
@@ -45,16 +41,12 @@ class MarkdownPreviewer extends React.Component {
         document.getElementById("preview-container").classList.remove("expanded");
         document.getElementById("editor-container").classList.remove("editor-collapsed");
         ;
-        this.setState((state) => Object.assign({},state,{
-          previewExpanded : false
-        }));
+        this.setState({previewExpanded : false});
       }
       else{
         document.getElementById("preview-container").classList.add("expanded");
         document.getElementById("editor-container").classList.add("editor-collapsed");
-        this.setState((state) => Object.assign({},state,{
-          previewExpanded : true
-        }));
+        this.setState({previewExpanded : true});
       }
 
     }
@@ -78,16 +70,11 @@ class MarkdownPreviewer extends React.Component {
       alert("Markdown copy to clipboard");
     }
     handleChange(event) {
-      let newState= Object.assign({},this.state,{input: event.target.value});
-      this.setState(newState);
+      this.setState({input: event.target.value});
     }
-   componentDidMount() {
-    this.setState((state) => Object.assign({},state,{
-      input: this.props.text
-    }));
-
-
-   }
+    componentDidMount() {
+      this.setState({input: this.props.text});
+    }
 
 
     
